@@ -49,16 +49,16 @@ class MainPresenter(private val view: MainContract.View, private val context: Co
         val seconds = 0
         val config = Config("topocentric", "lahiri")
 
-        val yourDate = validateAndParseDate(yourBirthDate, "yourBirthDate") ?: return
+        val yourDate = validateAndParseDate(yourBirthDate, "вашей даты рождения") ?: return
         val (yourYear, yourMonth, yourDay) = yourDate
 
-        val yourTime = validateAndParseTime(yourTimeOfBirth, "yourTimeOfBirth") ?: return
+        val yourTime = validateAndParseTime(yourTimeOfBirth, "вашего времени рождение") ?: return
         val (yourHours, yourMinutes) = yourTime
 
-        val theirDate = validateAndParseDate(theirBirthDate, "theirBirthDate") ?: return
+        val theirDate = validateAndParseDate(theirBirthDate, "даты рождения другого человка") ?: return
         val (theirYear, theirMonth, theirDay) = theirDate
 
-        val theirTime = validateAndParseTime(theirTimeOfBirth, "theirTimeOfBirth") ?: return
+        val theirTime = validateAndParseTime(theirTimeOfBirth, "времени рождения друого человека") ?: return
         val (theirHours, theirMinutes) = theirTime
         val request1 = AstroRequest(
             yourYear, yourMonth, yourDay, yourHours, yourMinutes, seconds, latitude, longitude, timezone,

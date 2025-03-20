@@ -13,7 +13,7 @@
         android:id="@+id/compatibilityLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find out compatibility"
+        android:text="Найдите Вашу совместимость"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,14 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:hint="Your date (YYYY-MM-DD)"
+            android:hint="Ваша дата рождения (ГГГГ-MM-ДД)"
             android:minHeight="40dp" />
 
         <EditText
             android:id="@+id/yourBirthTimeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your time (HH:MM)"
+            android:hint="Ваше время рождения (ЧЧ:MM)"
             android:minHeight="40dp" />
     </LinearLayout>
 
@@ -67,14 +67,14 @@
             android:layout_width="328dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:hint="Their date (YYYY-MM-DD)"
+            android:hint="Его/ее дата рождения (ГГГГ-MM-ДД)"
             android:minHeight="40dp" />
 
         <EditText
             android:id="@+id/theirBirthTimeInput"
             android:layout_width="328dp"
             android:layout_height="wrap_content"
-            android:hint="Their time (HH:MM)"
+            android:hint="Его/ее время рождения (ЧЧ:MM)"
             android:minHeight="40dp" />
     </LinearLayout>
 
@@ -92,7 +92,7 @@
         android:layout_width="359dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
-        android:text="Find out compatibility"
+        android:text="Рассчитать совместимость"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottomBarrier" />
