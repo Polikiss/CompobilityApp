@@ -126,7 +126,7 @@ class MainPresenter(private val view: MainContract.View, private val context: Co
 
         val maxScore = 100.0
         var currScore = compatibilityScore / maxScore * 100
-        val minScore = -100.0
+        val minScore = 0.0
         currScore = min(maxScore, currScore)
         currScore = max(minScore, currScore)
 
@@ -182,6 +182,10 @@ class MainPresenter(private val view: MainContract.View, private val context: Co
                 }
             }
         }
+    }
+
+    private fun hello(){
+        println("hello")
     }
 
     private fun validateAndParseDate(dateString: String, fieldName: String): Triple<Int, Int, Int>? {

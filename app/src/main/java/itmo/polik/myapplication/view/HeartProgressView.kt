@@ -61,11 +61,11 @@ class HeartProgressView  @JvmOverloads constructor(
         val heartHeight = bounds.height()
         val fillHeight = heartHeight * (1 - progress) // Инвертируем прогресс
 
-        // Клиппинг только в области сердца
+        // только в области сердца
         canvas.save()
         canvas.clipRect(
             bounds.left,
-            bounds.top + fillHeight, // Начинаем заполнение сверху
+            bounds.top + fillHeight,
             bounds.right,
             bounds.bottom
         )
@@ -90,8 +90,9 @@ class HeartProgressView  @JvmOverloads constructor(
         return PathParser.createPathFromPathData(heartPathData)
     }
 
-    fun setProgress(progress: Float) {
-        this.progress = progress.coerceIn(0f, 1f)
-        invalidate()
+    fun setProgress(newProgress: Float) {
+        progress = newProgress.coerceIn(0f, 1f) // Ensure progress stays between 0 and 1
+        invalidate() // Redraw the view with the new progress
     }
+
 }
